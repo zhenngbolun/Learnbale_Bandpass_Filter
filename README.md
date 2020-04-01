@@ -4,7 +4,7 @@ Image Demoireing with Learnable Bandpass Filter, CVPR2020
 If you find this work is helpful, please cite:
 
 @inProceedings{zheng2020,  
-author={B. {Zheng} and S. {Yuan} and g. {Slabaugh} and A. {Leonardis} ,  
+author={B. Zheng and S. Yuan and G. Slabaugh and A. Leonardis} ,  
 booktitle={IEEE Conference on Computer Vision and Pattern Recongnition},  
 title={Image Demoireing with Learnable Bandpass Filter},  
 year={2020},  
