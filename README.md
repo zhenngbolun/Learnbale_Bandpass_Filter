@@ -28,8 +28,6 @@ Clean: https://data.vision.ee.ethz.ch/timofter/AIM19demoire/ValidationClear.zip
 testing:  
 https://data.vision.ee.ethz.ch/timofter/AIM19demoire/TestingMoire.zip
 
-You can get the weight file for TIP2018 dataset via:  
-
 
 Then,  
 1. edit the 'main_multiscale.py' by:
