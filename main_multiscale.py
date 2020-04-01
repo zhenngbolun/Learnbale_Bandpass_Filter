@@ -11,6 +11,14 @@ from datetime import datetime
 import time
 from PIL import Image
 
+#the image dir of testing input
+test_path = 'F:\\dataset\\AIM2019\\Testing\\'
+#the image dir of validation groundtruth
+valid_gt_path = 'Validation\\clear\\'
+#the image dir of validation input
+valid_ns_path = 'Validation\\moire\\'
+#weight file path
+weight_path = 'model/MBCNN_weights.h5'
 
 # Validation or Testing
 def validate_ssim(model, gt_list, ns_list, name_list, multi_output=False):
@@ -34,7 +42,7 @@ def validate_ssim(model, gt_list, ns_list, name_list, multi_output=False):
         _gt[_gt<0] = 0
         _gt = _gt*255.0
         _gt = np.round(_gt).astype(np.uint8)
-        cv2.imwrite('validation_images/'+name_list[i],_gt)
+        cv2.imwrite('validation_result/'+name_list[i],_gt)
 
     print (np.round(psnr/count,3),np.round(ssim/count,4))
     return psnr/count
@@ -42,11 +50,11 @@ def validate_ssim(model, gt_list, ns_list, name_list, multi_output=False):
 def test(model,multi_output=False):
     psnr = 0
     count = 0
-    valid_path = 'F:\\dataset\\AIM2019\\Testing\\'
-    file_list = os.listdir(valid_path)
+    
+    file_list = os.listdir(test_path)
     file_list = list_filter(file_list,'.png')
     for f in file_list:
-        ns = cv2.imread(valid_path+f)
+        ns = cv2.imread(test_path+f)
         ns = ns.astype(np.float32)/255.0
         ns = ns.reshape((1,)+ns.shape)
         start = time.clock()
@@ -60,7 +68,7 @@ def test(model,multi_output=False):
         _gt[_gt<0] = 0
         _gt = _gt*255.0
         _gt = np.round(_gt).astype(np.uint8)
-        cv2.imwrite('compare/'+f,_gt)
+        cv2.imwrite('testing_result/'+f,_gt)
 
 #Generating validation datas
 def generate_validation(valid_list, multi_input, mode='sub'):
@@ -114,8 +122,7 @@ else:
 	os.environ["CUDA_VISIBLE_DEVICES"]="0"
 keras.backend.tensorflow_backend.set_session(get_session())
 
-valid_gt_path = 'Validation\\clear\\'
-valid_ns_path = 'Validation\\moire\\'
+
 
 
 multi_input = False
@@ -129,7 +136,7 @@ valid_list = os.listdir(valid_gt_path)
 valid_list = list_filter(valid_list, '.png')
 
 valid_gt_list, valid_ns_list, name_list = generate_validation(valid_list, multi_input, 'full')
-model.load_weights('model/MBCNN_weights.h5', by_name = True)
+model.load_weights(weight_path, by_name = True)
 #output validation results
 #min_loss = validate_ssim(model, valid_gt_list, valid_ns_list, name_list, multi_output)
 #output testing results
