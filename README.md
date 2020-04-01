@@ -3,7 +3,7 @@ Image Demoireing with Learnable Bandpass Filter
 
 If find this work is helpful, please cite:
 
-@Proceedings{zheng2020,  
+@inProceedings{zheng2020,  
 author={B. {Zheng} and S. {Yuan} and g. {Slabaugh} and A. {Leonardis} ,  
 booktitle={IEEE Conference on Computer Vision and Pattern Recongnition},  
 title={Image Demoireing with Learnable Bandpass Filter},  
@@ -17,10 +17,16 @@ Keras > 2.0
 opencv > 2.0
 
 You can get the weight file for AIM2019 via:
+
 https://1drv.ms/u/s!ArU0YIIFiFuHilwyuwHZjSpvPUBz?e=iZ70Ga
 
 You can get AIM2019 LCDMoire2019 dataset via:
+validation: 
+https://data.vision.ee.ethz.ch/timofter/AIM19demoire/ValidationMoire.zip
+https://data.vision.ee.ethz.ch/timofter/AIM19demoire/ValidationClear.zip
 
+testing:
+https://data.vision.ee.ethz.ch/timofter/AIM19demoire/TestingMoire.zip
 
 You can get the weight file for TIP2018 dataset via:
 
