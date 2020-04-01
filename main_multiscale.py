@@ -138,7 +138,7 @@ valid_list = list_filter(valid_list, '.png')
 valid_gt_list, valid_ns_list, name_list = generate_validation(valid_list, multi_input, 'full')
 model.load_weights(weight_path, by_name = True)
 #output validation results
-#min_loss = validate_ssim(model, valid_gt_list, valid_ns_list, name_list, multi_output)
+min_loss = validate_ssim(model, valid_gt_list, valid_ns_list, name_list, multi_output)
 #output testing results
 test(model, multi_output)
 exit(0)
