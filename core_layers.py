@@ -40,7 +40,7 @@ class adaptive_implicit_trans(layers.Layer):
     def build(self, input_shape):
         conv_shape = (1,1,64,64)
         self.it_weights = self.add_weight(
-            shape = (1,1,1,64),
+            shape = (1,1,64,1),
             initializer = initializers.get('ones'),
             constraint = constraints.NonNeg(),
             name = 'ait_conv')
