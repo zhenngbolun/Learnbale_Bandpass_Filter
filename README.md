@@ -1,5 +1,5 @@
 # Learnbale_Bandpass_Filter
-Image Demoireing with Learnable Bandpass Filter
+Image Demoireing with Learnable Bandpass Filter, CVPR2020
 
 If find this work is helpful, please cite:
 
