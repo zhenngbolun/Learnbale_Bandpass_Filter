@@ -20,6 +20,11 @@ valid_ns_path = 'Validation\\moire\\'
 #weight file path
 weight_path = 'model/MBCNN_weights.h5'
 
+multi_input = False
+multi_output = True
+model = MBCNN(64,multi_output) #MBCNN-light: model = MBCNN(32,multi_output)
+
+
 # Validation or Testing
 def validate_ssim(model, gt_list, ns_list, name_list, multi_output=False):
     print ("validating... ",datetime.now().strftime('%H:%M:%S'))
@@ -121,13 +126,6 @@ if multi_gpu:
 else:
 	os.environ["CUDA_VISIBLE_DEVICES"]="0"
 keras.backend.tensorflow_backend.set_session(get_session())
-
-
-
-
-multi_input = False
-multi_output = True
-model = MBCNN(64,multi_output)
 
 model.summary()
 #exit(0)
