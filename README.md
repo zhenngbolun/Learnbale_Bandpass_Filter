@@ -1,15 +1,16 @@
 # Learnbale_Bandpass_Filter
-Image Demoireing with Learnable Bandpass Filter, CVPR2020
+Image Demoireing with Learnable Bandpass Filters, CVPR2020
 
 If you find this work is helpful, please cite:
 
 @inProceedings{zheng2020,  
-author={B. Zheng and S. Yuan and G. Slabaugh and A. Leonardis} ,  
+author={B. Zheng and S. Yuan and G. Slabaugh and A. Leonardis},  
 booktitle={IEEE Conference on Computer Vision and Pattern Recongnition},  
-title={Image Demoireing with Learnable Bandpass Filter},  
+title={Image Demoireing with Learnable Bandpass Filters},  
 year={2020},  
 }
 
+You can now get this paper at Arxiv preprint: https://arxiv.org/abs/2004.00406
 ## Run the code
 This project requires:
 * Tensorflow >1.10
