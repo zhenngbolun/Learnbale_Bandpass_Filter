@@ -19,7 +19,9 @@ This project requires:
 * skImage
 
 You can get the weight file for AIM2019 via:  
-https://1drv.ms/u/s!ArU0YIIFiFuHilwyuwHZjSpvPUBz?e=iZ70Ga
+https://1drv.ms/u/s!ArU0YIIFiFuHilwyuwHZjSpvPUBz?e=iZ70Ga  
+or via Baidu Disk：  
+https://pan.baidu.com/s/1wsJYyYbQO-ETL5Jq4fN6hw code：jiae   
 
 You can get AIM2019 LCDMoire2019 dataset via:
 validation:   
