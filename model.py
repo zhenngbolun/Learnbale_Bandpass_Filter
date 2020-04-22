@@ -75,13 +75,13 @@ def MBCNN(nFilters, multi=True):
     x = layers.Input(shape=(None, None, 3))                 #16m*16m
     _x = Space2Depth(scale=2)(x)
     t1 = conv_func(_x,nFilters*2,3, padding='same')          #8m*8m
-    t1 = pre_block(t1, d_list_a)
+    t1 = pre_block(t1, d_list_a, True)
     t2 = layers.ZeroPadding2D(padding=(1,1))(t1)
     t2 = conv_func(t2,nFilters*2,3, padding='valid',strides=(2,2))              #4m*4m
-    t2 = pre_block(t2, d_list_b,False)
+    t2 = pre_block(t2, d_list_b,True)
     t3 = layers.ZeroPadding2D(padding=(1,1))(t2)
     t3 = conv_func(t3,nFilters*2,3, padding='valid',strides=(2,2))              #2m*2m
-    t3 = pre_block(t3,d_list_c, False)
+    t3 = pre_block(t3,d_list_c, True)
     t3 = global_block(t3)
     t3 = pos_block(t3, d_list_c)
     t3_out = conv(t3, 12, 3)
@@ -90,7 +90,7 @@ def MBCNN(nFilters, multi=True):
     _t2 = layers.Concatenate()([t3_out,t2])
     _t2 = conv_func(_t2, nFilters*2, 1)
     _t2 = global_block(_t2)
-    _t2 = pre_block(_t2, d_list_b,False)
+    _t2 = pre_block(_t2, d_list_b,True)
     _t2 = global_block(_t2)
     _t2 = pos_block(_t2, d_list_b)
     t2_out = conv(_t2, 12, 3)
@@ -99,7 +99,7 @@ def MBCNN(nFilters, multi=True):
     _t1 = layers.Concatenate()([t1, t2_out])
     _t1 = conv_func(_t1, nFilters*2, 1)
     _t1 = global_block(_t1)
-    _t1 = pre_block(_t1, d_list_a)
+    _t1 = pre_block(_t1, d_list_a, True)
     _t1 = global_block(_t1)
     _t1 = pos_block(_t1, d_list_a)
     _t1 = conv(_t1,12,3)
