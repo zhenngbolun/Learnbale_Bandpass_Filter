@@ -33,7 +33,7 @@ class Depth2Space(layers.Layer):
         else:
             return (None, None, None, int(input_shape[3]/self.scale**2))
 
-class adaptive_implicit_trans2(layers.Layer):
+class adaptive_implicit_trans(layers.Layer):
     def __init__(self, **kwargs):
         super(adaptive_implicit_trans2, self).__init__(**kwargs)
 
