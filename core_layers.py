@@ -35,7 +35,7 @@ class Depth2Space(layers.Layer):
 
 class adaptive_implicit_trans(layers.Layer):
     def __init__(self, **kwargs):
-        super(adaptive_implicit_trans2, self).__init__(**kwargs)
+        super(adaptive_implicit_trans, self).__init__(**kwargs)
 
     def build(self, input_shape):
         conv_shape = (1,1,64,64)
