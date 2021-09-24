@@ -7,27 +7,43 @@ The journal paper will come soon.
 If you find this work is helpful, please cite:
 
 @article{zheng2021learn,
+  
   title={Learning Frequency Domain Priors for Image Demoireing},
+  
   author = {Bolun, Zheng and Shanxin, Yuan and Chenggang, Yan and Xiang, Tian and Jiyong, Zhang and Yaoqi, Sun and Lin, Liu and Ales, Leonardis and Gregory, Slabaugh},
+  
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  
   year={2021}
 }
 
 @inProceedings{zheng2020,  
+
 author={B. Zheng and S. Yuan and G. Slabaugh and A. Leonardis},  
+
 booktitle={IEEE Conference on Computer Vision and Pattern Recongnition},  
+
 title={Image Demoireing with Learnable Bandpass Filters},  
+
 year={2020},  
 }
 
 @article{zheng2019implicit,
+  
   title={Implicit dual-domain convolutional network for robust color image compression artifact reduction},
+  
   author={Zheng, Bolun and Chen, Yaowu and Tian, Xiang and Zhou, Fan and Liu, Xuesong},
+  
   journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  
   volume={30},
+  
   number={11},
+  
   pages={3982--3994},
-  year={2019},
+  
+  year={2020},
+  
   publisher={IEEE}
 }
 
