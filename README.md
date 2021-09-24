@@ -3,6 +3,13 @@ Image Demoireing with Learnable Bandpass Filters, CVPR2020
 
 If you find this work is helpful, please cite:
 
+@article{zheng2021learn,
+  title={Learning Frequency Domain Priors for Image Demoireing},
+  author = {Bolun, Zheng and Shanxin, Yuan and Chenggang, Yan and Xiang, Tian and Jiyong, Zhang and Yaoqi, Sun and Lin, Liu and Ales, Leonardis and Gregory, Slabaugh},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2021}
+}
+
 @inProceedings{zheng2020,  
 author={B. Zheng and S. Yuan and G. Slabaugh and A. Leonardis},  
 booktitle={IEEE Conference on Computer Vision and Pattern Recongnition},  
