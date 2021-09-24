@@ -1,6 +1,9 @@
 # Learnbale_Bandpass_Filter
 Image Demoireing with Learnable Bandpass Filters, CVPR2020
 
+Our extension work is accepted by IEEE TPAMI.
+The journal paper will come soon.
+
 If you find this work is helpful, please cite:
 
 @article{zheng2021learn,
